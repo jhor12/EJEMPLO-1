@@ -1,0 +1,340 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Estilo para el botón de carrito flotante */
+.cart-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Estilo para la vista previa de la imagen del carrito */
+.cart-img-preview {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #f44336;
+    display: none;
+    overflow: hidden;
+}
+
+.cart-img-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Panel de vista previa del carrito */
+.cart-preview-panel {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #f44336;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+.cart-preview-panel.show {
+    display: block;
+}
+
+.btn-sm.btn-danger {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* Estilos para las alertas */
+.alert-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    animation: sparkles 1s infinite;
+}
+
+.alert-box.error {
+    background-color: #f44336;
+}
+
+.alert-box.fade-out {
+    opacity: 0;
+}
+
+/* Animación de chispas */
+@keyframes sparkles {
+    0%, 100% {
+        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6), 0 0 20px 4px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.8), 0 0 25px 5px rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Estilo para el contador del carrito */
+.cart-counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 2px 6px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Estilo para el contenedor del ícono de carrito */
+#cartIconContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-counter {
+    top: -5px;
+    left: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Panel de carrito */
+.cart-preview-panel .btn-sm {
+    font-size: 0.875rem;
+    padding: 5px 10px;
+}
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Botón flotante de carrito */
+.cart-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Modal de formulario de compra */
+.cart-preview-panel {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #f44336;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+/* Mostrar el modal con la clase 'show' */
+.cart-preview-panel.show {
+    display: block;
+}
+
+/* Estilo para las imágenes de productos en el modal */
+.cart-preview-panel .row img {
+    border-radius: 10px;
+}
+
+/* Estilo para el formulario */
+.form-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de cierre del modal */
+#closeFormBtn {
+    margin-top: 15px;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeFormBtn:hover {
+    background-color: #c82333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .cart-preview-panel {
+        max-width: 90%;
+    }
+}
+/* Estilos para el modal de completar compra */
+.modal-body form .form-label {
+    font-weight: bold;
+}
+
+.modal-body form .form-control {
+    margin-bottom: 10px;
+}
+
+.modal-body form button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+}
+.alert-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    animation: alertBoxAnim 2s ease-in-out;
+}
+
+.alert-box.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert-box.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+.spark {
+    position: absolute;
+    background-color: gold;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: sparkAnim 1s ease-in-out infinite;
+}
+
+@keyframes alertBoxAnim {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes sparkAnim {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(10px, -10px); opacity: 0.5; }
+    100% { transform: translate(20px, 0); opacity: 0; }
+}
+.alert-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    animation: alertBoxAnim 2s ease-in-out;
+}
+
+.alert-box.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert-box.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+.spark {
+    position: absolute;
+    background-color: gold;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: sparkAnim 1s ease-in-out infinite;
+}
+
+@keyframes alertBoxAnim {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes sparkAnim {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(10px, -10px); opacity: 0.5; }
+    100% { transform: translate(20px, 0); opacity: 0; }
+}
